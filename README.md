@@ -14,13 +14,43 @@ This is an n8n community node for integrating SAP HANA Vector Store with n8n wor
 
 ## Installation
 
-Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes/installation/) in the n8n community nodes documentation.
+**⚠️ Important**: This node is designed for **self-hosted n8n** installations only. It cannot be used with n8n Cloud due to dependency requirements.
 
-### npm Installation
+### Option 1: npm Installation (Recommended)
 
-```bash
-npm install n8n-nodes-sap-hana-vector-store
-```
+1. Navigate to your n8n installation directory
+2. Install the package:
+   ```bash
+   npm install n8n-nodes-sap-hana-vector-store
+   ```
+3. Restart your n8n instance
+
+### Option 2: Development Setup
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/pondev1/n8n-nodes-sap-hana-vector-store.git
+   cd n8n-nodes-sap-hana-vector-store
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Build the node:
+   ```bash
+   npm run build
+   ```
+
+4. Link the package locally:
+   ```bash
+   npm pack
+   cd ~/.n8n
+   npm install "C:\path\to\n8n-nodes-sap-ai-core\n8n-nodes-sap-hana-vector-store-1.0.0.tgz"
+   ```
+
+5. Restart your n8n instance
 
 ## Operations
 
@@ -97,7 +127,19 @@ Use the "Load" operation with:
 
 Ready-to-use n8n workflow examples are available in the `workflows/` directory:
 
-### 1. RAG (Retrieval-Augmented Generation) Workflow
+### 1. Document Ingestion Workflow
+**File**: [`workflows/Document Ingestion.json`](./workflows/Document%20Ingestion.json)
+
+Comprehensive workflow for ingesting documents into SAP HANA Vector Store with embeddings generation and storage.
+
+**Features**:
+- Document processing and chunking
+- Embedding generation using SAP AI Core
+- Vector storage in HANA database
+- Metadata extraction and storage
+- Batch processing capabilities
+
+### 2. RAG (Retrieval-Augmented Generation) Workflow
 **File**: [`workflows/RAG.json`](./workflows/RAG.json)
 
 Advanced RAG workflow that combines SAP AI Core embeddings, HANA Vector Store, and chat models for intelligent document retrieval and generation.
@@ -108,17 +150,6 @@ Advanced RAG workflow that combines SAP AI Core embeddings, HANA Vector Store, a
 - Vector store retrieval capabilities
 - AI agent with RAG functionality
 - Context-aware responses
-
-### 2. Get Data from SAP HANA Vector DB Workflow
-**File**: [`workflows/Get Data from SAP Hana Vector DB.json`](./workflows/Get%20Data%20from%20SAP%20Hana%20Vector%20DB.json)
-
-Simple workflow demonstrating how to retrieve data from SAP HANA Vector Store for similarity search and document retrieval.
-
-**Features**:
-- Vector database querying
-- Document retrieval operations
-- Similarity search functionality
-- Metadata filtering
 
 ### How to Use Sample Workflows
 

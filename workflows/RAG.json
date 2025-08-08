@@ -8,25 +8,24 @@
       "type": "@n8n/n8n-nodes-langchain.chatTrigger",
       "typeVersion": 1.3,
       "position": [
-        -864,
-        -128
+        -1008,
+        -176
       ],
-      "id": "a30e5d6f-66b4-4b94-b885-b865ea5deb2a",
+      "id": "8807b9f7-b7d0-43c3-9032-c9e23ffc390b",
       "name": "When chat message received",
       "webhookId": "d31fd3b8-558e-43a8-a505-191d7b0c81db"
     },
     {
       "parameters": {
-        "resourceGroup": "default",
         "options": {}
       },
       "type": "CUSTOM.sapAiCoreEmbeddings",
       "typeVersion": 1,
       "position": [
-        -400,
-        224
+        -544,
+        176
       ],
-      "id": "b8e20430-f56a-42d6-9bd2-ba615819b037",
+      "id": "5b091dd0-dd2f-449e-b98a-f198d9e0d068",
       "name": "SAP AI Core Embeddings"
     },
     {
@@ -36,66 +35,24 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2.2,
       "position": [
-        -528,
-        -160
+        -672,
+        -208
       ],
-      "id": "f6fd9ba9-e563-4650-8056-a5ac1d19f238",
+      "id": "93efe20b-6199-4ea0-ae81-ff121c207a4e",
       "name": "AI Agent"
     },
     {
       "parameters": {
-        "resourceGroup": "default",
         "options": {}
       },
       "type": "CUSTOM.sapAiCoreChatModel",
       "typeVersion": 1,
       "position": [
-        -688,
-        32
+        -832,
+        -16
       ],
-      "id": "1c57c1b9-d69d-4362-b461-db7162c698da",
+      "id": "d748a95a-b10f-48ac-b52f-8566aa01b377",
       "name": "SAP AI Core Chat Model"
-    },
-    {
-      "parameters": {
-        "mode": "insert",
-        "options": {}
-      },
-      "type": "CUSTOM.vectorStoreSAPHana",
-      "typeVersion": 1.3,
-      "position": [
-        336,
-        -48
-      ],
-      "id": "8d92b7eb-6973-4b58-97fe-1256a47cdb3d",
-      "name": "SAP HANA Vector Store1"
-    },
-    {
-      "parameters": {
-        "resourceGroup": "default",
-        "options": {}
-      },
-      "type": "CUSTOM.sapAiCoreEmbeddings",
-      "typeVersion": 1,
-      "position": [
-        160,
-        160
-      ],
-      "id": "bd7f177a-b4d3-420e-9f78-e7a43072058e",
-      "name": "SAP AI Core Embeddings1"
-    },
-    {
-      "parameters": {
-        "options": {}
-      },
-      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
-      "typeVersion": 1.1,
-      "position": [
-        480,
-        160
-      ],
-      "id": "283bcde8-74cf-454c-a6f6-589b7eb8d7a3",
-      "name": "Default Data Loader"
     },
     {
       "parameters": {
@@ -106,10 +63,10 @@
       "type": "CUSTOM.vectorStoreSAPHana",
       "typeVersion": 1.3,
       "position": [
-        -304,
-        32
+        -448,
+        -16
       ],
-      "id": "a8317984-59f7-4fe9-9220-261fd5e53725",
+      "id": "c7fdb102-3f40-4e7c-814d-d2eea54039e5",
       "name": "SAP HANA Vector Store"
     }
   ],
@@ -148,28 +105,6 @@
         ]
       ]
     },
-    "SAP AI Core Embeddings1": {
-      "ai_embedding": [
-        [
-          {
-            "node": "SAP HANA Vector Store1",
-            "type": "ai_embedding",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Default Data Loader": {
-      "ai_document": [
-        [
-          {
-            "node": "SAP HANA Vector Store1",
-            "type": "ai_document",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "SAP HANA Vector Store": {
       "ai_tool": [
         [
@@ -186,11 +121,11 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "f1536462-05b6-4f83-adc5-62403a65b13c",
+  "versionId": "e8b8f0ef-8322-4d46-89b9-776aaf7a7036",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "d425a6c2c2e0f777725504bc8771716cfac3780a0251faf43fb52fee871dc404"
   },
-  "id": "Kd94ADMymTgTnmLH",
+  "id": "A9y8QdgN0hM4N6Id",
   "tags": []
 }
