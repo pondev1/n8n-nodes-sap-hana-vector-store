@@ -1,0 +1,81 @@
+{
+  "name": "n8n-nodes-sap-hana-vector-store",
+  "version": "1.0.0",
+  "description": "n8n community node for SAP HANA Vector Store integration with LangChain",
+  "keywords": [
+    "n8n-community-node-package",
+    "sap-hana",
+    "vector-store",
+    "langchain",
+    "ai",
+    "embeddings",
+    "database"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/pondev1/n8n-nodes-sap-hana-vector-store",
+  "author": {
+    "name": "Pon Murugesh Devendren",
+    "email": "pon.murugesan.d@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pondev1/n8n-nodes-sap-hana-vector-store.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pondev1/n8n-nodes-sap-hana-vector-store/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && npm run copy:icons",
+    "copy:icons": "copyfiles \"nodes/**/*.{svg,png}\" \"credentials/**/*.{svg,png}\" dist/",
+    "dev": "tsc --watch",
+    "format": "prettier --write \"**/*.{ts,js,json,md}\"",
+    "lint": "eslint . --ext .ts",
+    "lintfix": "eslint . --ext .ts --fix",
+    "package": "npm run build && npm pack",
+    "test": "echo 'Tests will be added in future versions'",
+    "clean": "rimraf dist *.tgz",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/SapHanaApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/SapHanaVectorStore/SapHanaVectorStore.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.0.0",
+    "n8n-workflow": "^1.82.0",
+    "prettier": "^3.0.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@langchain/community": "^0.3.49",
+    "@langchain/core": "^0.3.66",
+    "@sap-ai-sdk/langchain": "^1.17.0",
+    "hdb": "^2.25.1"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "^1.82.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
